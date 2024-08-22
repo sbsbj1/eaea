@@ -1,0 +1,62 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="light">
+      <ion-title > Menú </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content color="dark" >
+
+    <ion-button id="a" routerLink="/add-pasajero"expand="block" fill="clear" shape="round">
+      <ion-icon name="car-outline"></ion-icon>
+      Ingresar Destino
+    </ion-button>
+    <ion-button id="e" routerLink="/list-p"expand="block" fill="clear" shape="round">
+      <ion-icon name="earth-outline"></ion-icon>
+      Lista De Pasajeros
+    </ion-button>
+    <ion-button (click)="exit()" id="c" expand="block" fill="clear" shape="round">
+      <ion-icon slot="start" name="exit-outline"> </ion-icon>
+
+      Salir
+    </ion-button>
+
+
+
+
+  </ion-content>
+  </ion-menu>
+
+
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+     
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title >DetailPasajero</ion-title>
+      
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>ID # {{ Pasajero.id}}</ion-card-subtitle>
+      <ion-card-title>nombre{{ Pasajero.nombre}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <strong>{{ Pasajero.lat}}</strong>
+      <br>
+      <label>{{ Pasajero.lng}}</label>
+    </ion-card-content>
+    <ion-button [routerLink]="['/update-pasajero',Pasajero.id]"  color="warning" ><ion-icon name="create" ></ion-icon></ion-button>
+    <ion-button [routerLink]="['/delete-pasajero',Pasajero.id]" color="danger" ><ion-icon name="trash"  ></ion-icon></ion-button>
+    
+    
+  </ion-card>
+
+</ion-content>
+</div>

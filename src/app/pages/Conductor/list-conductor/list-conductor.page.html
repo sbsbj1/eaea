@@ -1,0 +1,65 @@
+
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="light">
+      <ion-title > Menú </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content color="dark" >
+
+<!--      <ion-button id="i" routerLink="/noticias"expand="block" fill="clear" shape="round">
+      <ion-icon name="bug-outline"></ion-icon>
+      Noticias
+    </ion-button>
+    <ion-button id="i" routerLink="/found-p"expand="block" fill="clear" shape="round">
+      <ion-icon name="car-outline"></ion-icon>
+      Viaje GPS
+    </ion-button>
+    <ion-button id="i" routerLink="/add-conductor"expand="block" fill="clear" shape="round">
+      <ion-icon name="earth-outline"></ion-icon>
+      Agregar Vehiculo
+    </ion-button>
+    <ion-button id="xa" routerLink="/list-p"expand="block" fill="clear" shape="round">
+      <ion-icon name="earth-outline"></ion-icon>
+      Lista De Pasajeros
+    </ion-button>  -->
+    <ion-button (click)="exit()" id="i" expand="block" fill="clear" shape="round">
+      <ion-icon slot="start" name="exit-outline"> </ion-icon>
+
+      Salir
+    </ion-button>
+
+
+
+
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title id="xx">ListConductor</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-text color="primary">
+    <h1>Lista Conductores Disponibles</h1>
+  </ion-text>
+
+
+
+  <ion-list>
+    <ion-item *ngFor="let c of conductor; let indexArray = index" [routerLink]="['/detail-conductor',c.id]">
+      <ion-label>{{c.nombre}} <ion-button expand="block" fill="clear" shape="round">
+        Recoger conductor
+      </ion-button></ion-label>
+      <ion-label>{{c.marca}}</ion-label>
+      <ion-label>{{c.patente}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+<ion-content>
+

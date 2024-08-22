@@ -1,0 +1,88 @@
+
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="light">
+      <ion-title > Menú </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content color="dark" >
+
+    <ion-button id="i" routerLink="/noticias"expand="block" fill="clear" shape="round">
+      <ion-icon name="bug-outline"></ion-icon>
+      Noticias
+    </ion-button>
+    <ion-button id="i" routerLink="/found-p"expand="block" fill="clear" shape="round">
+      <ion-icon name="car-outline"></ion-icon>
+      Viaje GPS
+    </ion-button>
+    <ion-button id="i" routerLink="/add-conductor"expand="block" fill="clear" shape="round">
+      <ion-icon name="earth-outline"></ion-icon>
+      Agregar Vehiculo
+    </ion-button>
+    <ion-button id="xa" routerLink="/list-p"expand="block" fill="clear" shape="round">
+      <ion-icon name="earth-outline"></ion-icon>
+      Lista De Pasajeros
+    </ion-button>
+    <ion-button (click)="exit()" id="i" expand="block" fill="clear" shape="round">
+      <ion-icon slot="start" name="exit-outline"> </ion-icon>
+
+      Salir
+    </ion-button>
+
+    
+  </ion-content>
+</ion-menu>
+
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title id="xx">Add Conductor</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+<ion-content>
+  <form>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" name="txt" placeholder="Nombre" [(ngModel)]="newConductor.nombre" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">marca</ion-label>
+      <ion-input type="text" name="marca" placeholder="marca" [(ngModel)]="newPasajero.marca"required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">patente</ion-label>
+      <ion-input type="text" name="patente" placeholder="patente" [(ngModel)]="newPasajero.patente" required></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        
+      
+      <ion-button (click)="crearConductor()" expand="block"  color="success" >
+        Agregar
+      </ion-button>
+    </ion-col>
+    </ion-row>
+    
+
+
+
+
+
+
+
+
+  </form>
+
+</ion-content>
+
+
+
+

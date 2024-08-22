@@ -1,0 +1,65 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="light">
+      <ion-title > Menú </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content color="dark" >
+
+    <ion-button id="i" routerLink="/viaje"expand="block" fill="clear" shape="round">
+      <ion-icon name="car-outline"></ion-icon>
+      Viaje
+    </ion-button>
+    <ion-button id="a" routerLink="/home"expand="block" fill="clear" shape="round">
+      <ion-icon name="earth-outline"></ion-icon>
+      Informacion
+    </ion-button>
+    <ion-button id="e" routerLink="/add-pasajero"expand="block" fill="clear" shape="round">
+      <ion-icon name="earth-outline"></ion-icon>
+      Ingresar-Pasajero
+    </ion-button>
+    <ion-button id="xa" routerLink="/list-conductor"expand="block" fill="clear" shape="round">
+      <ion-icon name="earth-outline"></ion-icon>
+      Lista De Conductores
+    </ion-button>
+    <ion-button id="xa" routerLink="/list-p"expand="block" fill="clear" shape="round">
+      <ion-icon name="earth-outline"></ion-icon>
+      Lista De Pasajeros
+    </ion-button>
+    <ion-button (click)="exit()" id="c" expand="block" fill="clear" shape="round">
+      <ion-icon slot="start" name="exit-outline"> </ion-icon>
+
+      Salir
+    </ion-button>
+
+
+
+
+  </ion-content>
+</ion-menu>
+
+
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title id="xx">Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+
+
+
+    <!--<div id="map"></div>-->
+    <!--<div id="indicators"></div>-->
+    <capacitor-google-map #map></capacitor-google-map>
+
+    <div>
+      <ion-button routerLink="/cotizar" expand="block" mode="ios">
+        Cotizar
+      </ion-button>
+    </div>
+</ion-content>

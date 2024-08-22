@@ -1,0 +1,22 @@
+{
+  "conductor": [
+    {
+      "id": 1,
+      "nombre": "lucas",
+      "marca": "hyundai",
+      "patente": "A29S"
+    },
+    {
+      "nombre": "Claudio",
+      "marca": "Kia",
+      "patente": "OLE32",
+      "id": 2
+    },
+    {
+      "nombre": "Jorge",
+      "marca": "Kia",
+      "patente": "OLE32",
+      "id": 3
+    }
+  ]
+}

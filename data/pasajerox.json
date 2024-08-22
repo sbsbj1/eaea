@@ -1,0 +1,22 @@
+{
+  "pasajeros": [
+    {
+      "nombre": "Darwin",
+      "lat": 343423,
+      "lng": 234234,
+      "id": 2
+    },
+    {
+      "nombre": "Ignacio",
+      "lat": 2313,
+      "lng": 321343,
+      "id": 3
+    },
+    {
+      "nombre": "Pablo",
+      "lat": 324234234,
+      "lng": 213124,
+      "id": 4
+    }
+  ]
+}
